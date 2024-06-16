@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: k3s-app
+  name: k3s-app-test
   labels:
     app: k3s-app
 spec:
