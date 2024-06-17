@@ -8,9 +8,9 @@ module "k3s-node-asg" {
   min_size            = 1
   max_size            = 1
   desired_capacity    = 1
-  asg_ec2_type        = "t3.medium"
-  init_script_file    = "k3s-cluster-init.sh"
-  asg_ami             = "ami-0705384c0b33c194c"
-  vpc_zone_identifier = ["subnet-03c13aa240d01440c"]
-  security_group_ids  = ["sg-0c3084252611c84b5"]
+  asg_ec2_type        = var.asg_ec2_type
+  init_script_file    = var.init_script_file
+  asg_ami             = var.asg_ami
+  vpc_zone_identifier = var.vpc_zone_identifier
+  security_group_ids  = var.security_group_ids
 }
