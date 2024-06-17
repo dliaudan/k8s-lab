@@ -1,0 +1,38 @@
+replicaCount: 1
+
+resources:
+  requests:
+    memory: 512Mi
+    cpu: 500m
+  limits:
+    memory: 1024Mi
+    cpu: 1000m
+
+logPersistence:
+  enabled: true
+  size: 10Gi
+  accessModes:
+    - ReadWriteOnce
+
+metrics:
+  kafka:
+    enabled: true
+
+service:
+  type: LoadBalancer
+
+zookeeper:
+  enabled: true
+  replicaCount: 1
+  resources:
+    requests:
+      memory: 512Mi
+      cpu: 500m
+    limits:
+      memory: 1024Mi
+      cpu: 1000m
+  persistence:
+    enabled: true
+    size: 10Gi
+    accessModes:
+      - ReadWriteOnce

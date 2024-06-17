@@ -8,7 +8,7 @@ module "k3s-node-asg" {
   min_size            = 1
   max_size            = 1
   desired_capacity    = 1
-  asg_ec2_type        = "t3.small"
+  asg_ec2_type        = "t3.medium"
   init_script_file    = "k3s-cluster-init.sh"
   asg_ami             = "ami-0705384c0b33c194c"
   vpc_zone_identifier = ["subnet-03c13aa240d01440c"]
